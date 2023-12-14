@@ -1,7 +1,6 @@
 package xyz.rfsfernandes.faureciaaptoide.presentation.details
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.text.format.Formatter
 import android.view.LayoutInflater
@@ -14,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
@@ -33,12 +33,13 @@ class DetailsFragment : Fragment() {
     private val binding get() = _binding!!
     private val args: DetailsFragmentArgs by navArgs()
     private val alertDialog by lazy {
-        AlertDialog.Builder(requireContext())
+        MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.we_re_sorry))
             .setMessage(getString(R.string.download_is_not_available_in_demo_mode))
-            .setNeutralButton(getString(R.string.close)) { dialog, which ->
+            .setNeutralButton(getString(R.string.close)) { dialog, _ ->
                 dialog.dismiss()
-            }.create()
+            }
+            .show()
     }
 
     private lateinit var snackbar: Snackbar
