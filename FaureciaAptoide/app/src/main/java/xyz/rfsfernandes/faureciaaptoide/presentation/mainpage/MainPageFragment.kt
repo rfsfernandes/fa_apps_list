@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast.LENGTH_LONG
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -71,7 +70,10 @@ class MainPageFragment : Fragment() {
                 is MainPageViewState.Error -> {
                     if (!::snackbar.isInitialized) {
                         snackbar =
-                            Snackbar.make(binding.root, getString(it.errorStringId), LENGTH_LONG)
+                            Snackbar.make(
+                                binding.root,
+                                getString(it.errorStringId),
+                                Snackbar.LENGTH_LONG)
                     }
                     if (!snackbar.isShown) {
                         snackbar.show()
