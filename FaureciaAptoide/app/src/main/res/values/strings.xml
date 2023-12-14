@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FaureciaAptoide</string>
+    <string name="network_error_message">A network error occurred. Please check your connection.</string>
+    <string name="generic_error_message">Something went bad. Please try again or contact the administrators.</string>
+    <string name="app_icon">App Icon</string>
+    <string name="rating">Rating:</string>
+    <string name="downloads">Downloads:</string>
+    <string name="app_size">App Size:</string>
+    <string name="version">Version:</string>
+    <string name="publisher">Publisher:</string>
+    <string name="published_in">Published in:</string>
+    <string name="last_updated_in">Last updated in:</string>
+    <string name="channel_name">new_apps_notification_channel</string>
+    <string name="channel_description">A channel used to notify the user that new apps are available</string>
+    <string name="new_apps">New apps are available!</string>
+    <string name="new_apps_description">Come and check the new apps!</string>
+    <string name="newAppsWorkerName">New Apps Worker</string>
+    <string name="download">Download</string>
+    <string name="we_re_sorry">We\'re sorry!</string>
+    <string name="download_is_not_available_in_demo_mode">Download is not available in demo mode.</string>
+    <string name="close">Close</string>
+</resources>
